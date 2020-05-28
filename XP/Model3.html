@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>UkrCars</title>
+    <link rel="stylesheet" type="text/css" href="app.cssM">
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script src='app.fullpage'></script>
+    <script src="app.js"></script>
+</head>
+<body>
+<ul>
+    <li><a href="/mod3">Model 3</a></li>
+    <li><a href="/mod3">Model S</a></li>
+    <li><a href="/mod3">Model X</a></li>
+    <li><a href="/mod3">Model Y</a></li>
+    <li><a href="/mod3">Roadster</a></li>
+    <li><a href="/">Автопарк</a></li>
+</ul>
+<div id="fullpage">
+    <section>
+        <img id="CarPhoto" src="app.cg">
+        <div class="option">
+            <h1>COLOR:</h1>
+            <label class="container">
+                <input type="radio" onclick="color(value)" name="color" value="cbl">
+                <span id="Black" class="checkmark"></span>
+            </label>
+            <label class="container">
+                <input type="radio"onclick="color(value)" name="color" value="cw">
+                <span id="White" class="checkmark"></span>
+            </label>
+            <label class="container">
+                <input type="radio" onclick="color(value)" name="color" value="cg">
+                <span id="Gray" class="checkmark"></span>
+            </label>
+            <label class="container">
+                <input type="radio" onclick="color(value)" name="color" value="cr">
+                <span id="Red" class="checkmark"></span>
+            </label>
+            <label class="container">
+                <input type="radio" onclick="color(value)" name="color" value="cb">
+                <span id="Blue" class="checkmark"></span>
+            </label>
+            <div class="conf">
+                <h1>BATTERY:</h1>
+                <table class="tabl">
+                    <tr>
+                        <th>75</th>
+                        <th>+0km</th>
+                        <th><input type="radio" onclick="batterySelector(75)" name="battery" value="75">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>85</th>
+                        <th>+100km</th>
+                        <th><input type="radio" onclick="batterySelector(85)" name="battery" value="85">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>95</th>
+                        <th>200km</th>
+                        <th><input type="radio" onclick="batterySelector(95)"  name="battery" value="95">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>100</th>
+                        <th>250km</th>
+                        <th><input type="radio" onclick="batterySelector(100)"  name="battery" value="100">
+                        </th>
+                    </tr>
+                </table>
+                <h1>FULL DRIVE:</h1>
+                <table class="tabl">
+                    <tr>
+                        <th>4X4:</th>
+                        <th>+5000$</th>
+                        <th><input onclick="fullSelector()"  type="checkbox" name="fullDrive" value="+"></th>
+                    </tr>
+                </table>
+                <h1>SPORT:</h1>
+                <table class="tabl">
+                    <tr>
+                        <th>Two Engine</th>
+                        <th>+3000$</th>
+                        <th><input onclick="sportSelector()" type="checkbox" name="Sport"></th>
+                    </tr>
+                </table>
+                <h1>AUTO PILOT:</h1>
+                <table class="tabl">
+                    <tr>
+                        <th>Include AP</th>
+                        <th>+5000$</th>
+                        <th><input onclick="autoPilotSelector()"  type="checkbox" name="Ap"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="indicator">Розгін до 100 <h2 id = "speed">5.3</h2></div>
+            <div class="indicator">Запас ходу<h2 id = "range">300</h2></div>
+            <div class="indicator">Вартість <h2 id = "cost">40000</h2></div>
+        </div>
+    </section>
+    <section>
+        <img id="IntPhoto" src="app.sb">
+        <div class="optionInt">
+            <h1>COLOR:</h1>
+            <div class="col">
+                <label class="container">
+                    <input type="radio" onclick="colorInside(value)" name="color" value="sb">
+                    <span id="BlackInt" class="checkmark"></span>
+                </label>
+                <label class="container">
+                    <input type="radio" onclick="colorInside(value)" name="color" value="sw">
+                    <span id="WhiteInt" class="checkmark"></span>
+                </label>
+            </div>
+            <div class="conf">
+                <h1>SKIN:</h1>
+                <table class="tabl">
+                    </tr>
+                    <tr>
+                        <th>
+                            Natural
+                        </th>
+                        <th>
+                            +3000$
+                        </th>
+                        <th>
+                            <input type="checkbox" onclick="skinSelector()" name="skin" value="+">
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="statsInt">
+            <div class="indicator">Розгін до 100 <h2 id = "speed1">5.3</h2></div>
+            <div class="indicator">Запас ходу<h2 id = "range1">300</h2></div>
+            <div class="indicator">Вартість <h2 id = "cost1">40000</h2></div>
+        </div>
+    </section>
+    <section>
+        <div class="info">
+            <input type="text" onchange="makeOrder()" id="firstName" class="inp" placeholder="First Name"><br><br>
+            <input type="text" onchange="makeOrder()" id="lastName" class="inp" placeholder="Last Name"><br><br>
+            <input type="text" onchange="makeOrder()" id="phone" class="inp" placeholder="Phone"><br><br>
+            <input type="text" onchange="makeOrder()" id="email" class="inp" placeholder="Email"><br><br>
+            <a onclick="" href="/send" class="button">Order car</a>
+        </div>
+    </section>
+</div>
+<script type="text/javascript">
+    $('#fullpage').fullpage();
+</script>
+</body>
+</html>

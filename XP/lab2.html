@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Лаборагорна робота 2</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <a href="/" ><li>Головна</li></a>
+        <a href="/app.lab1" ><li>Шифр Цезаря</li></a>
+        <a href="/app.lab2" ><li>Шифр Гамми</li></a>
+        <a href="/app.lab3" ><li>Шифр RSA</li></a>
+        <a href="/app.lab4" ><li>Цифровий підпис</li></a>
+    </ul>
+</div>
+<div class="tt">
+    <div class="t"><br><br><br><br></div>
+
+    <div class="task">
+        Шифрування повідомлення методом накладення гамми
+        використовуючи таблицю.
+    </div>
+    <div class="imput">
+        <input id="gam" type="text" value="БРАТОМИЛ">
+    </div>
+    <div class="imput">
+        <input id="text" type="text" value="ПРІАМУРСК_50А">
+    </div>
+    <div class="button">
+        <button onclick="Click()" >Зашифрувати!</button>
+    </div>
+    <div class="task">
+        Використовуючи алфавіт, дешифрувати повідомлення, яке
+        зашифроване методом гамування.
+    </div>
+    <div class="imput">
+        <input id="gamUN" type="text" value="ДОБРИЛО">
+    </div>
+    <div class="imput">
+        <input id="textUN" type="text" value="ИГЯЇЩТ6АВ_ЮГЙМБ">
+    </div>
+    <div class="button">
+        <button onclick="ClickUN()" >Розшифрувати!</button>
+    </div>
+    <div class="task">
+        Шифрування даних над файлами за методом біграм фрази на українській мові. Ключове
+        слово довільне та вводиться користувачем.
+    </div>
+    <div class="imput">
+        <input id="gamDOD" type="text" placeholder="Введіть ключове слово">
+    </div>
+    <div class="imput">
+        <input id="textDOD" type="text"  placeholder="Введіть текст...">
+    </div>
+    <div class="button">
+        <button onclick="ClickDOD()" >Розшифрувати!</button>
+    </div>
+    <script src="/app.js2"></script>
+</body>
+</html>

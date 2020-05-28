@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Лаборагорна робота 1</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <a href="/" ><li>Головна</li></a>
+            <a href="/app.lab1" ><li>Шифр Цезаря</li></a>
+            <a href="/app.lab2" ><li>Шифр Гамми</li></a>
+            <a href="/app.lab3" ><li>Шифр RSA</li></a>
+            <a href="/app.lab4" ><li>Цифровий підпис</li></a>
+        </ul>
+    </div>
+    <div class="tt">
+        <div class="t"><br><br><br><br></div>
+        <div class="task">
+            Модифікація шифру Цезаря при якій текст розбивається на частини по
+            16 символів і у межах кожної частини здійснюється «різний» зсув, де
+            ключ – масив зсувів кожного блоку. Результат представити в бітовому
+            представленні (в вісімковій системі числення).
+        </div>
+        <select id="lang" name="lang">
+            <option value="UA">Українська мова</option>
+            <option value="EU">Англійська мова</option>
+        </select>
+        <div class="imput">
+            <input id="text" type="text" placeholder="Введіть текст...">
+        </div>
+
+        <div class="button">
+        <button onclick="Clickk()" >Зашифрувати!</button>
+        </div>
+        <p id="result" ></p>
+        <p id="mat"></p>
+
+        <div class="task">
+            Порівняння розподілу ймовірностей
+            наявних символів файлу до та після шифрування. Результати ймовірностей
+            представити у табличній та графічній формах для кожного символу.
+        </div>
+        <div class="imput">
+            <input id="dod1" type="text" placeholder="Введіть текст...">
+        </div>
+        <div class="imput">
+            <input id="dod2" type="text" placeholder="Введіть текст...">
+        </div>
+
+        <div class="button">
+            <button onclick="ClickDod()" >Порівняти!</button>
+        </div>
+
+        <p id="resulto" ></p>
+
+    </div>
+
+    <script src="/app.js1"></script>
+</body>
+</html>
